@@ -29,4 +29,29 @@ function obtener_post($post_por_paginas, $conexion){
 }
 
 
+// limpiar el id del single.php/?id=2
+function id_articulo($id){
+    return (int)limpiarDatos($id);
+}
+
+
+function obtenerPostId($conexi, $id){
+    $resultado = $conexi->query("SELECT * FROM articulos WHERE id = $id LIMIT 1");
+    $resultado = $resultado->fetchAll();
+    return ($resultado) ? $resultado : false;
+}
+
+function fecha($fecha){
+    $timestamp = strtotime($fecha);
+    $meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    $dia = date('d', $timestamp);
+    $mes = date('m', $timestamp) - 1;
+    $year = date('Y', $timestamp);
+
+    $fecha = "$dia de " . $meses[$mes] . " del $year";
+    return $fecha;
+}
+
+
+
 ?>

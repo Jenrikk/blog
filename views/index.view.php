@@ -3,23 +3,22 @@
 
     <div class="contenedor">
 
-        <!-- <div class="post">
+        <?php foreach($posts as $post): ?>
+            <div class="post">
             <article>
                 <h2 class="titulo">
-                    <a href="">Titulo del articulo</a>
+                    <a href="single.php?id=<?php echo $post['id'] ?>"><?php echo $post['titulo'] ?></a>
                 </h2>
-                <p class="fecha">10 de Enero de 2011</p>
+                <p class="fecha"><?php echo $post['fecha'] ?></p>
                 <div class="thumb">
-                    <a href="#">
-                        <img src="<?php echo RUTA?>/imagenes/1.jpg" alt="">
+                    <a href="single.php?id=<?php echo $post['id'] ?>">
+                        <img src="<?php echo RUTA; ?>/imagenes/<?php echo $post['thumb']; ?>" alt="">
                     </a>
                 </div>
-                <p class="extracto">s quam oratione eiciendum? Sint modo partes vitae beatae. Unum est sine dolore esse</p>
-                <a class="continuar" href="">Seguir leyendo</a>
+                <p class="extracto"><?php echo $post['extracto'] ?></p>
+                <a class="continuar" href="single.php?id=<?php echo $post['id'] ?>">Seguir leyendo</a>
             </article>
-        </div> -->
-
-        <?php foreach($posts as $post): ?>
+        </div>
         <?php endforeach; ?>
 
 
