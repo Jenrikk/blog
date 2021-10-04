@@ -2,7 +2,8 @@
 
 
     <div class="contenedor">
-        <div class="post">
+
+        <!-- <div class="post">
             <article>
                 <h2 class="titulo">
                     <a href="">Titulo del articulo</a>
@@ -16,7 +17,11 @@
                 <p class="extracto">s quam oratione eiciendum? Sint modo partes vitae beatae. Unum est sine dolore esse</p>
                 <a class="continuar" href="">Seguir leyendo</a>
             </article>
-        </div>
+        </div> -->
+
+        <?php foreach($posts as $post): ?>
+        <?php endforeach; ?>
+
 
         <?php require 'paginacion.php'; ?>
     </div>
