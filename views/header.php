@@ -15,7 +15,7 @@
                 <p><a href="<?php echo RUTA?>">Mi blog</a></p>
             </div>
             <div class="derecha">
-                <form name="busqueda" class="buscar" action="<?php echo RUTA?>/buscar.php" method="get">
+                <form name="busqueda" class="buscar" action="<?php echo RUTA; ?>/buscar.php" method="get">
                     <input type="text" name="busqueda" placeholder="Buscar">
                     <button type="submit" class="icono fa fa-search"></button>
                 </form>
